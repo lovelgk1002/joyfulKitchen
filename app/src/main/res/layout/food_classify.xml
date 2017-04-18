@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!-- 搜索栏顶部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:background="#F95404"
+        android:focusableInTouchMode="true"
+        >
+        <!--  <  返回-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/menu_out_0"
+            />
+        <!--顶部输入框-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="搜索菜谱 如:糖醋排骨"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:background="@drawable/menu_lay_top_shape"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:drawableLeft="@mipmap/menu_search_0"
+            />
+        <!-- 按钮  搜索-->
+        <Button
+            android:id="@+id/menu_btn"
+            android:layout_width="60dp"
+            android:background="@null"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textColor="@android:color/white"
+            android:text="搜索"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ScrollView
+            android:id="@+id/tools_scrlllview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#eee"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/framelayout_fr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+    <!--菜谱分类内部 肉类、豆类、......-->
+    <!--  <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+          &lt;!&ndash; &lt;!&ndash;scrollview可滑动控件&ndash;&gt;&ndash;&gt;
+           <ScrollView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+              <include layout="@layout/food_classify_son"/>
+           </ScrollView>
+       </LinearLayout>-->
+</LinearLayout>
