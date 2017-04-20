@@ -30,6 +30,5 @@ public class MyTitleInfoLayout extends LinearLayout {
         });
 
 
-
     }
 }

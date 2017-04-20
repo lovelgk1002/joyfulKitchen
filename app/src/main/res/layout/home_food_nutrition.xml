@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--显示-->
+    <TextView
+        android:id="@+id/home_change_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <!--<LinearLayout
+         android:id="@+id/home_nofood_ly"
+         android:layout_weight="1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:orientation="horizontal"
+         >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:drawableLeft="@mipmap/home_nofood"
+             android:textStyle="bold"
+             android:textSize="20sp"
+             android:padding="5dp"
+             android:text="@string/home_nofood_tv"
+             />
+
+     </LinearLayout>-->
+    <!--
+        <LinearLayout
+            android:id="@+id/home_food_ly"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C0C000"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前称量的热量是"
+                />
+        </LinearLayout>
+    -->
+</LinearLayout>

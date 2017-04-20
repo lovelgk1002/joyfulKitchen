@@ -21,12 +21,12 @@ public class HomePointerImg extends Handler {
     private ImageView needleView;  //指针图片
     private Timer timer;  //时间
 
-    private double finalWeight = 2500.0;//最终显示的重量、蓝牙接收的数据
+    private double finalWeight = 0.0;//最终显示的重量、蓝牙接收的数据
 
-    private float degree = 0.0f;  //记录指针旋转
+    private float degree = -125.0f;  //记录指针旋转
     private double allWeight = 5000.0 ;
 
-    private double allDegree = 172.0 ;
+    private double allDegree = 245.0 ;
     private double finaldegree = 0.0; //记录最终指针的偏转度数
 	/*称转动参数结束*/
 
@@ -39,7 +39,7 @@ public class HomePointerImg extends Handler {
 
     public void run(){
 
-        finaldegree = finalWeight * allDegree /allWeight ;//设置转动的角度
+        finaldegree = finalWeight * allDegree /allWeight+ degree;//设置转动的角度
         // 开始转动
         timer = new Timer();
         // 设置每一秒转动一下
@@ -59,7 +59,7 @@ public class HomePointerImg extends Handler {
             degree += 2.0f;
             RotateAnimation animation = new RotateAnimation(degree,
                     degree, Animation.RELATIVE_TO_SELF, 0.5f,
-                    Animation.RELATIVE_TO_SELF, 0.5f);
+                    Animation.RELATIVE_TO_SELF, 0.45f);
             animation.setDuration(1000);
             animation.setFillAfter(true);
             needleView.startAnimation(animation);

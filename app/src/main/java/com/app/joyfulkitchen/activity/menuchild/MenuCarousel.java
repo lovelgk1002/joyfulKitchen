@@ -9,6 +9,7 @@ import java.util.Map;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.joyfulkitchen.activity.R;
+import com.app.joyfulkitchen.model.MenuCarouselType;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,6 +41,8 @@ public class MenuCarousel extends Activity {
     private FragmentManager manager;
     private FragmentTransaction transaction;
 
+
+    private MenuCarouselType menuCarouselType = new MenuCarouselType();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,13 +51,17 @@ public class MenuCarousel extends Activity {
 
         manager = getFragmentManager();
         transaction = manager.beginTransaction();
-        transaction.add(R.id.framelayout_fr, new Carousel(), "肉类");//默认显示这个
+
+        menuCarouselType.setFoodType(0); //自定义默认传值
+        getIntent().putExtra("TYPE",menuCarouselType.toString());//得到数值
+
+        transaction.add(R.id.framelayout_fr, new Carousel(), "肉类");//默认显示这个Fragment
         transaction.commit();//提交
         inflater = LayoutInflater.from(MenuCarousel.this.getApplicationContext());
         scrollView = (ScrollView) MenuCarousel.this.findViewById(R.id.tools_scrlllview);
         showToolsView();
     }
-        //
+    //
 //        gview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
 //            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -64,12 +72,12 @@ public class MenuCarousel extends Activity {
 //        });
 
 
-/*
+    /*
 
-    /*动态生成items中的textView*/
+        /*动态生成items中的textView*/
     private  void showToolsView(){
-        toolsList = new String[]{"肉类","豆类","奶类","海鲜类","汤粥类","甜品","烘培","水果",
-                "鸡蛋","私家菜"};
+        toolsList = new String[]{"谷物","豆类","根茎类","叶菜类","菌类","海菜类","茄瓜类","干果类",
+                "飞禽类","乳类","蛋类","鱼类"};
         LinearLayout toolsLayout  = (LinearLayout) MenuCarousel.this.findViewById(R.id.tools);
         toolsTextViews = new TextView[toolsList.length];
         views = new View[toolsList.length];
@@ -100,24 +108,100 @@ public class MenuCarousel extends Activity {
 
             switch (n){
                 case 0:
+                    menuCarouselType.setFoodType(0);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
                     transaction = manager.beginTransaction();
-                    transaction.replace(R.id.framelayout_fr, new Carousel(),"肉类");
+                    transaction.replace(R.id.framelayout_fr, new Carousel(),"谷物");
                     transaction.commit();
-                    Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    /// Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
                     break;
                 case 1:
+                    menuCarouselType.setFoodType(1);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
                     transaction = manager.beginTransaction();
-                    transaction.replace(R.id.framelayout_fr,new Carousel_Beans(),"豆类");
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"豆类");
                     transaction.commit();
-/*
-                    Intent it = new Intent(MenuCarousel.this,Carousel_Beans.class);
-                    Bundle bl = new Bundle();
-                    bl.putInt("N",n);
-                    it.putExtras(bl);
-                    startActivity(it);*/
-
-
-                    Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 2:
+                    menuCarouselType.setFoodType(2);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"根茎类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 3:
+                    menuCarouselType.setFoodType(3);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"叶菜类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 4:
+                    menuCarouselType.setFoodType(4);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"菌类");
+                    transaction.commit();
+                    //Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 5:
+                    menuCarouselType.setFoodType(5);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"海菜类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 6:
+                    menuCarouselType.setFoodType(6);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"茄瓜类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 7:
+                    menuCarouselType.setFoodType(7);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"干果类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 8:
+                    menuCarouselType.setFoodType(8);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"飞禽类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 9:
+                    menuCarouselType.setFoodType(9);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"乳类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 10:
+                    menuCarouselType.setFoodType(10);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"蛋类");
+                    transaction.commit();
+                    // Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
+                    break;
+                case 11:
+                    menuCarouselType.setFoodType(11);
+                    getIntent().putExtra("TYPE",menuCarouselType.toString());
+                    transaction = manager.beginTransaction();
+                    transaction.replace(R.id.framelayout_fr,new Carousel(),"鱼类");
+                    transaction.commit();
+                    //Toast.makeText(MenuCarousel.this,""+n, Toast.LENGTH_SHORT).show();
                     break;
             }
         }

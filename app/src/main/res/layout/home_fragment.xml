@@ -8,10 +8,9 @@
 		android:layout_width="match_parent"
 		android:layout_height="40dp"
 		android:orientation="horizontal"
-        android:background="@color/home_bg"
+		android:background="@color/home_bg"
 		android:paddingTop="5dp"
         >
-
 		<!--三杠图标-->
         <ImageView
             android:id="@+id/home_menu"
@@ -65,81 +64,107 @@
 		android:orientation="vertical">
 		<RelativeLayout
 			android:layout_width="match_parent"
-			android:layout_height="250dp"
-			android:background="@mipmap/home_pan_bg">
+			android:layout_height="300dp"
+			android:background="@color/home_bg">
 			<ImageView
 				android:id="@+id/home_panel"
-				android:layout_width="270dp"
-				android:layout_height="270dp"
+				android:layout_width="300dp"
+				android:layout_height="300dp"
 				android:src="@mipmap/home_panel"
-				android:layout_centerHorizontal="true"
-				android:layout_marginBottom="-60dp"
-				android:layout_marginTop="20dp"/>
+				android:layout_centerHorizontal="true"/>
 
 			<ImageView
 				android:id="@+id/needle"
-				android:layout_width="270dp"
-				android:layout_height="270dp"
+				android:layout_width="30dp"
+				android:layout_height="400dp"
+				android:layout_marginTop="70dp"
 				android:layout_centerHorizontal="true"
-				android:layout_marginTop="20dp"
-				android:layout_marginBottom="-60dp"
 				android:src="@mipmap/home_needle" />
+
+			<ImageView
+				android:layout_width="65dp"
+				android:layout_height="65dp"
+				android:layout_marginTop="140dp"
+				android:layout_centerHorizontal="true"
+				android:src="@mipmap/home_bluetooth"/>
 
 			<TextView
 				android:id="@+id/home_look_tv"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/app_name"
-				android:layout_marginTop="180dp"
-				android:textSize="20sp"
 				android:background="@drawable/home_rounded_tv"
-				android:layout_centerHorizontal="true" />
-
-			<RadioGroup
-				android:id="@+id/home_rg"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentBottom="true"
 				android:layout_centerHorizontal="true"
-				android:orientation="horizontal"
-				android:checkedButton="@+id/home_gbtn_g">
+				android:textSize="24sp"
+				android:textColor="#ffffff"
+				android:textStyle="bold"
+				android:layout_marginTop="250dp"
+				/>
+
+		</RelativeLayout>
+	</LinearLayout>
+    <!--称布局结束-->
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/home_bg"
+		android:padding="10dp"
+		android:gravity="center_horizontal"
+		>
+
+		<RadioGroup
+			android:id="@+id/home_rg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:orientation="horizontal"
+			android:checkedButton="@+id/home_gbtn_g">
 
 			<RadioButton
 				android:id="@+id/home_gbtn_g"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
 				android:button ="@drawable/home_unit_radiocheck"
+				android:textSize="18sp"
 				android:text="@string/home_groupbutton_g"
 				/>
 			<RadioButton
 				android:id="@+id/home_gbtn_oz"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
 				android:button ="@drawable/home_unit_radiocheck"
+				android:textSize="18sp"
 				android:text="@string/home_groupbutton_oz" />
 			<RadioButton
 				android:id="@+id/home_gbtn_ml"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
 				android:button ="@drawable/home_unit_radiocheck"
+				android:textSize="18sp"
 				android:text="@string/home_groupbutton_ml" />
 			<RadioButton
 				android:id="@+id/home_gbtn_tael"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
 				android:button ="@drawable/home_unit_radiocheck"
+				android:textSize="18sp"
 				android:text="@string/home_groupbutton_tael" />
 			<RadioButton
 				android:id="@+id/home_gbtn_lb"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
 				android:button ="@drawable/home_unit_radiocheck"
+				android:textSize="18sp"
 				android:text="@string/home_groupbutton_pound"/>
-			</RadioGroup>
-		</RelativeLayout>
+		</RadioGroup>
 	</LinearLayout>
-    <!--称布局结束-->
-
 
 	<RelativeLayout
 		android:layout_width="match_parent"
@@ -167,92 +192,13 @@
 			/>
 	</RelativeLayout>
 
-
-	<!--显示-->
-	<TextView
-		android:id="@+id/home_change_tv"
-		android:layout_width="match_parent"
+	<Button
+		android:id="@+id/home_food_nutrition"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/home_food_nutrition"
 		/>
-   <!--<LinearLayout
-		android:id="@+id/home_nofood_ly"
-		android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:gravity="center"
-			android:drawableLeft="@mipmap/home_nofood"
-			android:textStyle="bold"
-			android:textSize="20sp"
-			android:padding="5dp"
-			android:text="@string/home_nofood_tv"
-			/>
-
-    </LinearLayout>-->
-<!--
-	<LinearLayout
-		android:id="@+id/home_food_ly"
-		android:layout_weight="1"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:background="#C0C000"
-		android:orientation="vertical"
-		>
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="当前称量的热量是"
-			/>
-	</LinearLayout>
--->
-
-	<!--头部切换食材-->
-	<LinearLayout
-		android:id="@+id/home_edt_ly"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="horizontal">
-
-		<TextView
-			android:layout_weight="1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text=" "/>
-
-		<EditText
-			android:id="@+id/home_search_edt"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:hint="@string/home_search_name"
-			android:background="@drawable/home_rounded_edt"
-			android:textSize="18sp"
-			android:layout_gravity="center"
-			android:gravity="center"
-			/>
-
-		<TextView
-			android:layout_weight="1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text=" "/>
-
-		<ImageView
-			android:id="@+id/home_title_set"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:src="@mipmap/home_title_set"
-			android:padding="5dp"
-			/>
-	</LinearLayout>
-
-
-
 
 	<!--模仿蓝牙数据-->
 

@@ -31,7 +31,7 @@ public class MenuInformation extends FragmentActivity {
 
         getinitView();
 
-        for (int i = 0; i <5; i++) {
+        for (int i = 0; i <20; i++) {
             Message m = new Message();
             m.setMenuName("沙拉");
             m.setImg("R.mipmap.aa");

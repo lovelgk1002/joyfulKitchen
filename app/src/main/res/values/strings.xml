@@ -12,5 +12,6 @@
     <string name="home_groupbutton_ml">毫升</string>
     <string name="home_groupbutton_tael">两</string>
     <string name="home_groupbutton_pound">磅</string>
+    <string name="home_food_nutrition">选择食材</string>
 
 </resources>
