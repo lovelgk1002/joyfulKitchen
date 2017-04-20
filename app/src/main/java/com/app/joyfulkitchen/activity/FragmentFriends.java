@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class FragmentThree extends Fragment {
+public class FragmentFriends extends Fragment {
 
 
 	@Override

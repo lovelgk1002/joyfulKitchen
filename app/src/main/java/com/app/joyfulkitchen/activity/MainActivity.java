@@ -47,7 +47,7 @@ public class MainActivity extends FragmentActivity {
                         break;
                     case R.id.r3:
                         trans = manager.beginTransaction();
-                        trans.replace(R.id.frame, new FragmentThree(), "frag");
+                        trans.replace(R.id.frame, new FragmentFriends(), "frag");
                         //trans.addToBackStack("back");
                         trans.commit();
                         break;

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:focusable="true"
-        android:background="#F95404"
+        android:background="@color/home_bg"
         android:focusableInTouchMode="true"
         >
         <!--  <  返回-->
