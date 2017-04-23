@@ -31,16 +31,6 @@ public class MenuInformation extends FragmentActivity {
 
         getinitView();
 
-        for (int i = 0; i <20; i++) {
-            Message m = new Message();
-            m.setMenuName("沙拉");
-            m.setImg("R.mipmap.aa");
-
-            messageList1.add(m);//上周
-            //定义一个界面与数据的混合体,一个item代表一行记录
-
-        }
-
         /*设置适配器*/
         info_list.setAdapter(new BaseAdapter() {
             @Override
@@ -65,7 +55,7 @@ public class MenuInformation extends FragmentActivity {
                     Log.i("info:", "没有缓存，重新生成"+position);
                     LayoutInflater inflater = MenuInformation.this.getLayoutInflater();
                     //因为getView()返回的对象，adapter会自动赋给ListView
-                    view = inflater.inflate(R.layout.menu_info_list, null);
+                    view = inflater.inflate(R.layout.menu_foodlist, null);
                 }else{
                     Log.i("info:", "有缓存，不需要重新生成"+position);
                     view = convertView;
