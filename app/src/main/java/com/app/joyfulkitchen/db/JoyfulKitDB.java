@@ -21,6 +21,7 @@ public class JoyfulKitDB extends SQLiteOpenHelper{
             "create table Nutrition(" +
             "id integer primary key autoincrement ," + //主键
             "foodName varchar(20) not null ," +   // 食物名称
+
             "foodProtein varchar(20) not null," +  //蛋白质
             "foodFat varchar(20) not null ," +     //脂肪
             "foodCarbon varchar(20) not null ," +   //碳水化合物

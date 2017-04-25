@@ -33,7 +33,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.app.joyfulkitchen.activity.homeChild.HomeChangeFood;
 import com.app.joyfulkitchen.activity.homeChild.HomePointerImg;
 import com.app.joyfulkitchen.activity.menuchild.MenuCarousel;
 import com.app.joyfulkitchen.db.JoyfulKitDB;
@@ -64,9 +63,6 @@ public class FragmentHome extends Fragment implements TextToSpeech.OnInitListene
 	/******************单位换算单选radioGroup按钮********************/
 	private RadioGroup rg ;
 	private RadioButton g,oz,ml,tael,lb;
-
-	/*********************************点击跳转页面*************************************/
-	private Button foodNutrition ;
 
 	/**************************语音播报参数****************************/
 	private EditText inputText = null;//测试用，模拟蓝牙接收的数据
@@ -287,8 +283,6 @@ public class FragmentHome extends Fragment implements TextToSpeech.OnInitListene
 			startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
 		}
 
-		Toast.makeText(getActivity(),"打开蓝牙后", Toast.LENGTH_LONG).show();
-
 		if (lazyCallback == null) {
 			Log.i("lazyCallback","lazyCallback  new前");
 			lazyCallback = new LazyCallback();
@@ -382,15 +376,6 @@ public class FragmentHome extends Fragment implements TextToSpeech.OnInitListene
 			@Override
 			public void onClick(View v) {
 				Intent it = new Intent(getActivity(),MenuCarousel.class);
-				startActivity(it);
-			}
-		});
-
-		foodNutrition.setOnClickListener(new View.OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				Intent it = new Intent(getActivity(),HomeChangeFood.class);
 				startActivity(it);
 			}
 		});
@@ -493,9 +478,6 @@ public class FragmentHome extends Fragment implements TextToSpeech.OnInitListene
 		tael = (RadioButton)view.findViewById(R.id.home_gbtn_tael);//两
 		lb = (RadioButton)view.findViewById(R.id.home_gbtn_lb);//英镑
 
-
-		/*点击跳转页面*/
-		foodNutrition = (Button) view.findViewById(R.id.home_food_nutrition);//选择食材
 	}
 
 

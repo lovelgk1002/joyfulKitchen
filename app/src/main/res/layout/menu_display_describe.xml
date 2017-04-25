@@ -52,7 +52,7 @@
         </LinearLayout>
         <!--图文介绍-->
         <LinearLayout
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_weight="1"
@@ -68,6 +68,7 @@
                     android:src="@mipmap/muent_meat01"
                    android:layout_marginTop="10dp"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:scaleType="fitXY"
                     />
                 <!--菜名标题介绍-->
                 <TextView
