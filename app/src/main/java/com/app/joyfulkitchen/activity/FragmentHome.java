@@ -33,7 +33,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.app.joyfulkitchen.activity.homeChild.HomeChangeFood;
 import com.app.joyfulkitchen.activity.homeChild.HomePointerImg;
 import com.app.joyfulkitchen.activity.menuchild.MenuCarousel;
 import com.app.joyfulkitchen.db.JoyfulKitDB;
@@ -64,9 +63,6 @@ public class FragmentHome extends Fragment implements TextToSpeech.OnInitListene
 	/******************单位换算单选radioGroup按钮********************/
 	private RadioGroup rg ;
 	private RadioButton g,oz,ml,tael,lb;
-
-	/*********************************点击跳转页面*************************************/
-	private Button foodNutrition ;
 
 	/**************************语音播报参数****************************/
 	private EditText inputText = null;//测试用，模拟蓝牙接收的数据
@@ -386,15 +382,6 @@ public class FragmentHome extends Fragment implements TextToSpeech.OnInitListene
 			}
 		});
 
-		foodNutrition.setOnClickListener(new View.OnClickListener(){
-
-			@Override
-			public void onClick(View v) {
-				Intent it = new Intent(getActivity(),HomeChangeFood.class);
-				startActivity(it);
-			}
-		});
-
 		/************称布局****************/
 
 		lookStr = finalWeight +"g" ;
@@ -493,9 +480,6 @@ public class FragmentHome extends Fragment implements TextToSpeech.OnInitListene
 		tael = (RadioButton)view.findViewById(R.id.home_gbtn_tael);//两
 		lb = (RadioButton)view.findViewById(R.id.home_gbtn_lb);//英镑
 
-
-		/*点击跳转页面*/
-		foodNutrition = (Button) view.findViewById(R.id.home_food_nutrition);//选择食材
 	}
 
 

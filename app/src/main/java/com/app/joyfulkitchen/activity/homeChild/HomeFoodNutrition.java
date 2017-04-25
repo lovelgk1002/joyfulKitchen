@@ -17,7 +17,6 @@ public class HomeFoodNutrition extends Activity {
     private String food=null;//当前称量的食物
     private TextView changetv ;//显示当前食物tv
 
-    static  HomeChangeFood changefood;
 
     Bundle bl;
     Intent intent;
@@ -52,7 +51,7 @@ public class HomeFoodNutrition extends Activity {
         if(food == null || food.equals("")){
             return "你还没选择食物";
         }else {
-            return "当前称量的食物是"+food;
+            return ""+food;
         }
     }
 }

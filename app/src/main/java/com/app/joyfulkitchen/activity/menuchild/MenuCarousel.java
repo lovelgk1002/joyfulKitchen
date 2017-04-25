@@ -9,27 +9,21 @@ import java.util.Map;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 /*import android.widget.GridView;
 import android.widget.SimpleAdapter;*/
-import android.widget.GridView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.app.joyfulkitchen.activity.R;
+import com.app.joyfulkitchen.activity.homeChild.HomeFoodNutrition;
 import com.app.joyfulkitchen.model.MenuCarouselType;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class MenuCarousel extends Activity {
     private  String toolsList[];
@@ -41,12 +35,37 @@ public class MenuCarousel extends Activity {
     private FragmentManager manager;
     private FragmentTransaction transaction;
 
+    //
+    private Button food_btn;
+    private EditText food_et;
 
     private MenuCarouselType menuCarouselType = new MenuCarouselType();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_classify);
+
+
+        food_et = (EditText)findViewById(R.id.food_et);
+        ///food_et.setBackgroundResource(R.drawable.menu_lay_top_shape);
+        //food_et.setBackgroundColor(getResources().getColor(R.color.lightwhite));
+
+
+        //按钮跳转
+        food_btn = (Button)findViewById(R.id.food_btn);
+
+        food_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(MenuCarousel.this, HomeFoodNutrition.class);
+                intent.putExtra("food",food_et.getText().toString() );
+                startActivityForResult(intent, 0);
+
+            }
+        });
+
+
 
 
         manager = getFragmentManager();
@@ -76,6 +95,7 @@ public class MenuCarousel extends Activity {
 
         /*动态生成items中的textView*/
     private  void showToolsView(){
+
         toolsList = new String[]{"谷物","豆类","根茎类","叶菜类","菌类","海菜类","茄瓜类","干果类",
                 "飞禽类","乳类","蛋类","鱼类"};
         LinearLayout toolsLayout  = (LinearLayout) MenuCarousel.this.findViewById(R.id.tools);

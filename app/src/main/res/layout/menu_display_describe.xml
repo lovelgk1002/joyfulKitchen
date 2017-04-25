@@ -52,7 +52,7 @@
         </LinearLayout>
         <!--图文介绍-->
         <LinearLayout
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_weight="1"
