@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--菜谱详细页   做法-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:id="@+id/stepImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/Icon"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/numbericon"
+            android:textSize="30dp"
+            android:text="1"
+            />
+
+        <TextView
+            android:id="@+id/describle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="asdaasd"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

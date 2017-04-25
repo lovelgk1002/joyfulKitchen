@@ -21,7 +21,10 @@
         android:layout_height="150dp"
         android:background="@mipmap/heart">
         <TextView
+<<<<<<< HEAD
             android:id="@+id/Kcal"
+=======
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -114,20 +117,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_protein"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodProtein"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -135,20 +150,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_fat"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodFat"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -156,20 +183,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_carbon"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodCarbon"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -177,20 +216,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_heat"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodHeat"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -198,20 +249,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_salt"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodSalt"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -219,20 +282,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_calcium"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodCalcium"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -240,20 +315,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_phosphorus"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodPhosphorus"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -261,20 +348,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_weight="1"
                 android:gravity="left"
+=======
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/food_tron"/>
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/foodIron"
                 android:layout_weight="1"
                 android:gravity="right"
+=======
+                android:layout_weight="1"
+                android:gravity="center"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

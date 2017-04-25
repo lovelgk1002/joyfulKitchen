@@ -25,6 +25,7 @@ public class HomeFoodNutrition extends Activity {
     private String food;//当前称量的食物
     private TextView changetv ;//显示当前食物tv
 
+<<<<<<< HEAD
     private JoyfulKitDB joyfulKitDB;
     private SQLiteDatabase db;
     private Cursor cursor;
@@ -33,6 +34,8 @@ public class HomeFoodNutrition extends Activity {
                       foodHeat,foodCalcium,foodPhosphorus,foodIron;
 
 
+=======
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
 
     Bundle bl;
     Intent intent;
@@ -82,6 +85,7 @@ public class HomeFoodNutrition extends Activity {
             return "你还没选择食物";
         }else {
             return ""+food;
+<<<<<<< HEAD
         }
     }
 
@@ -124,6 +128,8 @@ public class HomeFoodNutrition extends Activity {
 
 
 
+=======
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
         }
         cursor.close();
         db.close();

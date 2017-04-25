@@ -32,6 +32,7 @@
 			/>
 		<!--顶部输入框-->
 
+<<<<<<< HEAD
 		<TextView
 			android:layout_weight="1"
 			android:layout_width="wrap_content"
@@ -40,6 +41,10 @@
 
 		<EditText
 			android:id="@+id/menu_et"
+=======
+		<EditText
+			android:id="@+id/sear_MName"
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
 			android:layout_width="200dp"
 			android:layout_height="30dp"
 			android:hint="搜索菜名 如:糖醋排骨"
