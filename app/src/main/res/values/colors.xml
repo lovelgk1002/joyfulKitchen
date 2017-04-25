@@ -10,5 +10,10 @@
 
 
     <color name="home_bg">#81D8CF</color>
+<<<<<<< HEAD
    <!-- <color name="home_bg">#FBF29D</color>-->
+=======
+    <color name="yellow">#FDEF93</color>
+
+>>>>>>> 36cfa6bee01b15397555e595a7ce7595642bd2d0
 </resources>

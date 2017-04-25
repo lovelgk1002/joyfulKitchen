@@ -13,5 +13,19 @@
     <string name="home_groupbutton_tael">两</string>
     <string name="home_groupbutton_pound">磅</string>
     <string name="home_food_nutrition">选择食材</string>
+    <string name="food_nutrition">营养价值</string>
+<<<<<<< HEAD
+    <string name="food_unit">每100克含量</string>
+=======
+    <string name="food_unit">克/100克</string>
+>>>>>>> ee8c772c5de05fe9a6131785c51421547d394549
+    <string name="food_protein">蛋白质</string>
+    <string name="food_fat">脂肪</string>
+    <string name="food_carbon">碳水化合物</string>
+    <string name="food_heat">热量</string>
+    <string name="food_salt">无机盐类</string>
+    <string name="food_calcium">钙</string>
+    <string name="food_phosphorus">磷</string>
+    <string name="food_tron">铁</string>
 
 </resources>

@@ -37,7 +37,6 @@
             android:theme="@style/Theme.AppCompat.Dialog" />
 
 
-        <activity android:name=".homeChild.HomeChangeFood"></activity>
         <activity android:name=".homeChild.HomeFoodNutrition"></activity>
 
         <service android:name="com.app.joyfulkitchen.service.BluetoothService"></service>

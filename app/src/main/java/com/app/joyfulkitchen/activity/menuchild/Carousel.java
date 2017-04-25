@@ -1,6 +1,7 @@
 package com.app.joyfulkitchen.activity.menuchild;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.joyfulkitchen.activity.R;
+import com.app.joyfulkitchen.activity.homeChild.HomeFoodNutrition;
 import com.app.joyfulkitchen.db.JoyfulKitDB;
 
 import java.util.ArrayList;
@@ -72,27 +74,19 @@ public class Carousel extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 textView = (TextView) view.findViewById(R.id.carousel_f1_text); //点击得到该分类的子类名称
                 TextView textView2 = (TextView) view.findViewById(R.id.Nutrition_id);//这控件为隐藏状态 却是储存Nutrition表的id
-                String name = textView.getText().toString();
-                String  id_0= textView2.getText().toString();
-                Toast.makeText(getActivity(), name+id_0, Toast.LENGTH_SHORT).show();
-
+                Intent intent=new Intent();
+                intent.setClass(getActivity(), HomeFoodNutrition.class);
+                intent.putExtra("food",textView.getText().toString() );
+                startActivityForResult(intent, 0);
             }
         });
-
-
-
-
         return view;
-
-
     }
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
     }
-
 
     public List<Map<String,Object>> getData(){
         int count = cursor.getCount();
@@ -100,7 +94,6 @@ public class Carousel extends Fragment {
         for (int i=0;i<count;i++){
             cursor.moveToNext();
             Map<String,Object> map = new HashMap<String,Object>();
-            //map.put("text",text[i]);
             map.put("foodName",cursor.getString(cursor.getColumnIndex("foodName")));//得到名称
             map.put("id",cursor.getInt(cursor.getColumnIndex("id")));//得到id
             data_list.add(map);
@@ -108,7 +101,4 @@ public class Carousel extends Fragment {
         return  data_list;
     }
 
-    public void  onclick(){
-
-    }
 }

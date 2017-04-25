@@ -47,11 +47,11 @@
                     />-->
 				<CheckBox
 					android:id="@+id/checkbox"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
 					android:checked="true"
 					android:button="@drawable/home_speak_checkbox"
-					android:padding="5dp"
+					android:layout_marginRight="8dp"
 					/>
             </LinearLayout>
 
@@ -191,15 +191,7 @@
 			android:text="下一个"
 			/>
 	</RelativeLayout>
-
-	<Button
-		android:id="@+id/home_food_nutrition"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_gravity="center"
-		android:text="@string/home_food_nutrition"
-		/>
-
+ya
 	<!--模仿蓝牙数据-->
 
 	<EditText android:id="@+id/inputText"
