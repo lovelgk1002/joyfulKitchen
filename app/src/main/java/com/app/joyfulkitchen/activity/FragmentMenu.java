@@ -19,6 +19,7 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -80,6 +81,11 @@ public class FragmentMenu extends Fragment {
 	private String[] name = {"粤菜","川菜","湘菜","西餐","其他"};
 	private HomeAdapter mAdapter;
 
+	/*菜谱搜索框*/
+	private EditText sear_MName;
+	private String menuName;
+
+
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 							 ViewGroup container, Bundle savedInstanceState) {
@@ -110,9 +116,15 @@ public class FragmentMenu extends Fragment {
 		menu_btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//Intent intent = new Intent(getActivity(),new Newest().getClass());
-				//getActivity().startActivity(intent);
-				Intent intent = new Intent(getActivity(),new Newest().getClass());
+				sear_MName = (EditText) view.findViewById(R.id.sear_MName);
+				menuName =sear_MName.getText().toString().trim();
+				/*Toast.makeText(getActivity(), menuName, Toast.LENGTH_SHORT).show();*/
+				/*跳转食物详细信息栏*/
+				Intent intent = new Intent(getActivity(), new Newest().getClass());
+				Bundle bundle=new Bundle();
+				//传递menuName参数为 变量menuName；
+				bundle.putString("menuName", menuName);
+				intent.putExtras(bundle);
 				getActivity().startActivity(intent);
 
 			}

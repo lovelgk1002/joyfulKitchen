@@ -44,6 +44,7 @@
                 />
 
             <TextView
+                android:id="@+id/imtro"
                 android:layout_width="240dp"
                 android:layout_height="160dp"
                 android:layout_marginTop="120dp"
@@ -67,7 +68,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="asdas"
+                android:text="食材明细"
                 android:textColor="#AFAFAF"
                 android:gravity="bottom"
                 android:layout_marginLeft="30dp"
@@ -90,17 +91,50 @@
 
             </ListView>
 
-           <Button
-               android:id="@+id/m_info_weigh"
-               android:layout_width="240dp"
-               android:layout_height="50dp"
-               android:layout_gravity="center"
-               android:text="开始称量"
-               android:layout_marginTop="30dp"
-               android:background="@drawable/menu_radius"
-               android:textSize="25sp"
+            <Button
+                android:id="@+id/m_info_weigh"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="开始称量"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/menu_radius"
+                android:textSize="25sp"
 
-               />
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="40dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="做法"
+                android:textColor="#AFAFAF"
+                android:gravity="bottom"
+                android:layout_marginLeft="30dp"
+                >
+            </TextView>
+            <View  android:layout_height="1px"
+                android:layout_width="match_parent"
+                android:background="#AFAFAF"
+
+                />
+
+            <ListView
+                android:id="@+id/menu_info_list2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="@null"
+                />
         </LinearLayout>
 
 
