@@ -16,13 +16,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="wrap_content"
 
             >
             <ImageView
+                android:id="@+id/info_menuImg"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@mipmap/menu_aa"
+                android:scaleType="fitXY"
                 />
 
             <ImageView
@@ -46,12 +47,12 @@
             <TextView
                 android:id="@+id/imtro"
                 android:layout_width="240dp"
-                android:layout_height="160dp"
+                android:layout_height="340dp"
                 android:layout_marginTop="120dp"
                 android:background="@android:color/white"
                 android:layout_centerHorizontal="true"
                 android:textColor="#AFAFAF"
-                android:text="asdadadada"
+
                 />
 
         </RelativeLayout>
@@ -80,16 +81,22 @@
                 android:background="#AFAFAF"
 
                 />
-            <!--所需食材-->
-            <ListView
-                android:id="@+id/menu_info_list"
+            <!--主食材-->
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="#AFAFAF"
+                />
+            <!--配料-->
+            <TextView
+                android:id="@+id/burden"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:divider="@null"
-                >
+                android:padding="20dp"/>
 
-            </ListView>
 
             <Button
                 android:id="@+id/m_info_weigh"
@@ -106,7 +113,8 @@
 
         <LinearLayout
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_gravity="center_horizontal"
             android:paddingBottom="40dp"
             android:background="@android:color/white"
@@ -122,19 +130,20 @@
                 android:layout_marginLeft="30dp"
                 >
             </TextView>
-            <View  android:layout_height="1px"
+            <View
+                android:layout_height="1px"
                 android:layout_width="match_parent"
                 android:background="#AFAFAF"
-
                 />
-
             <ListView
-                android:id="@+id/menu_info_list2"
+                android:id="@+id/menu_info_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+
+                android:layout_weight="1"
                 android:divider="@null"
-                />
+                >
+            </ListView>
         </LinearLayout>
 
 

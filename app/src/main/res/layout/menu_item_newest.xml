@@ -5,6 +5,7 @@
     android:layout_height="150dp">
     <!--scaleType充斥设置的看iamgeview的高度-->
     <ImageView
+
         android:id="@+id/menuIamge"
         android:layout_width="match_parent"
         android:scaleType="fitXY"
@@ -16,10 +17,11 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:gravity="center"
-        android:background="#FFFAE3"
+        android:textColor="#FBF29D"
         android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:text="sadsa"
-        />
+        android:layout_alignBottom="@+id/menuIamge"
 
+
+        />
+    <!--android:layout_alignParentBottom="true"-->
 </RelativeLayout>

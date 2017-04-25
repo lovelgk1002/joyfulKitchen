@@ -2,32 +2,36 @@ package com.app.joyfulkitchen.model;
 
 import android.graphics.Bitmap;
 
+import org.json.JSONArray;
+
 import java.io.Serializable;
 
 /**
  * Created by Administrator on 2017/4/5.
  */
 public class Message implements Serializable{
-    private int id;
+    private String id;
 
     private Bitmap img;
 
     private String menuName;
-
+    /*配料*/
     private String burden;
-    private String step;
 
+    /*菜谱描述*/
     private String imtro;
     /*主料*/
     private String ingredients;
+    /*步骤*/
+    private JSONArray steps;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
 
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -47,13 +51,6 @@ public class Message implements Serializable{
         this.menuName = menuName;
     }
 
-    public String getStep() {
-        return step;
-    }
-
-    public void setStep(String step) {
-        this.step = step;
-    }
 
     public String getIngredients() {
         return ingredients;
@@ -79,14 +76,12 @@ public class Message implements Serializable{
         this.imtro = imtro;
     }
 
-    public Message(int id, Bitmap img, String menuName, String burden, String step, String imtro, String ingredients) {
-        this.id = id;
-        this.img = img;
-        this.menuName = menuName;
-        this.burden = burden;
-        this.step = step;
-        this.imtro = imtro;
-        this.ingredients = ingredients;
+    public JSONArray getSteps() {
+        return steps;
+    }
+
+    public void setSteps(JSONArray steps) {
+        this.steps = steps;
     }
 
     public Message() {

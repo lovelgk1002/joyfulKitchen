@@ -28,8 +28,7 @@ public class MenuForName extends AsyncTask{
     private String image;
     private List<Message> menuList;
     private Bitmap mainImg;
-    private int id;
-    private String imtro;
+    private String id;
 
     @Override
     protected Object doInBackground(Object[] params) {
@@ -50,19 +49,19 @@ public class MenuForName extends AsyncTask{
                 /*菜名*/
                 title = data.getString("title");
                 /*菜谱Id*/
-                id = data.getInt("id");
+                id = data.getString("id");
                 /*获取图片*/
                 JSONArray album = data.optJSONArray("albums");
                 image = album.getString(0);
                 mainImg = MenuAPI.getBitmap(image);
 
-                imtro = data.getString("imtro");
+
 
                 Message m = new Message();
                 m.setId(id);
                 m.setMenuName(title);
                 m.setImg(mainImg);
-                m.setImtro(imtro);
+
                 menuList.add(m);
 
             }

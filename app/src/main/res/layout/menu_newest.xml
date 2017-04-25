@@ -10,22 +10,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/home_bg"
         >
 
-       <ImageView
+        <ImageView
             android:id="@+id/sas"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@mipmap/menu_newest_back"
             android:layout_marginLeft="5dp"
-           android:layout_gravity="center_vertical"
+            android:layout_gravity="center_vertical"
             android:layout_alignParentLeft="true"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:text="最新推荐"/>
     </RelativeLayout>
 
@@ -37,7 +38,7 @@
         android:id="@+id/newsList"
         android:layout_weight="1"
         android:divider="@android:color/transparent"
-        android:dividerHeight="4dp"
+        android:dividerHeight="2dp"
 
         >
 

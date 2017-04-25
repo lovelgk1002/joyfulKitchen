@@ -67,7 +67,7 @@ public class MenuAPI {
     }
 
     //4.按菜谱ID查看详细
-    public static String getRequest4(int parentId){
+    public static String getRequest4(String parentId){
         String result =null;
         String url ="http://apis.juhe.cn/cook/queryid";//请求接口地址
         Map params = new HashMap();//请求参数
